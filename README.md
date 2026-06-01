@@ -67,3 +67,22 @@ Output Directory: dist
 - Primary brand color: `rgb(159, 174, 142)`
 - The website copy is in Serbian Latin.
 - Keep file names lowercase and avoid duplicates such as `.PNG`, `.png.png`, `.svg.svg`, `.DS_Store`, or `._filename`.
+
+
+## Vercel Registry Fix
+
+This project intentionally does not include `package-lock.json`.
+
+A `.npmrc` file is included to force Vercel to use the public npm registry:
+
+```txt
+registry=https://registry.npmjs.org/
+```
+
+Recommended Vercel settings:
+
+```txt
+Framework Preset: Vite
+Build Command: npm run build
+Output Directory: dist
+```
